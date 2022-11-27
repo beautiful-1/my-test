@@ -22,12 +22,12 @@ public class DelayTask implements Delayed {
 
     @Override
     public long getDelay(TimeUnit unit) {
-        return unit.convert(dealAt - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
+        return unit.convert(dealAt - System.currentTimeMillis(), TimeUnit.SECONDS);
     }
 
     @Override
     public int compareTo(Delayed o) {
-        if (getDelay(TimeUnit.MILLISECONDS) > o.getDelay(TimeUnit.MILLISECONDS)) {
+        if (getDelay(TimeUnit.SECONDS) > o.getDelay(TimeUnit.SECONDS)) {
             return 1;
         } else {
             return -1;
@@ -38,7 +38,7 @@ public class DelayTask implements Delayed {
     public static void main(String[] args) throws InterruptedException {
         DelayQueue<DelayTask> tasks = new DelayQueue<>();
         long cur = System.currentTimeMillis();
-        long[] delay = {15000L, 10000L, 5000L, 20000L};
+        long[] delay = {15, 10, 5, 20L};
         for (int i = 0; i < delay.length; i++) {
             DelayTask task = new DelayTask(delay[i] + cur, i);
             tasks.add(task);
