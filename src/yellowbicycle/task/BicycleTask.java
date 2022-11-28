@@ -1,9 +1,9 @@
-package test1.task;
+package yellowbicycle.task;
 
-import test1.ArriveQueue;
-import test1.ICar;
-import test1.IStation;
-import test1.impl.YellowBicycle;
+import yellowbicycle.ArriveQueue;
+import yellowbicycle.ICar;
+import yellowbicycle.IStation;
+import yellowbicycle.impl.YellowBicycle;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

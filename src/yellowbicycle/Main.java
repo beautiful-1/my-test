@@ -1,14 +1,13 @@
-package test1;
+package yellowbicycle;
 
-import test1.impl.CarImpl;
-import test1.impl.StationImpl;
-import test1.impl.YellowBicycle;
-import test1.task.BicycleArriveTask;
-import test1.task.CarArriveStationTask;
-import test1.task.BicycleTask;
-import test1.task.TransportBicycleTask;
+import yellowbicycle.impl.CarImpl;
+import yellowbicycle.impl.StationImpl;
+import yellowbicycle.impl.YellowBicycle;
+import yellowbicycle.task.BicycleArriveTask;
+import yellowbicycle.task.CarArriveStationTask;
+import yellowbicycle.task.BicycleTask;
+import yellowbicycle.task.TransportBicycleTask;
 
-import java.util.LinkedList;
 import java.util.concurrent.*;
 
 /**

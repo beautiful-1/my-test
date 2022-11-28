@@ -31,9 +31,9 @@ public class CatchRainWater {
         for (int i = n - 2; i >= 0; i--) {
             rightMax[i] = Math.max(height[i], rightMax[i + 1]);
         }
-        int ans=0;
+        int ans = 0;
         for (int i = 0; i < n; i++) {
-            ans+=Math.min(leftMax[i],rightMax[i])-height[i];
+            ans += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
         return ans;
     }

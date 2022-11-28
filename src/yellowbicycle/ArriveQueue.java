@@ -1,6 +1,4 @@
-package test1;
-
-import test1.impl.YellowBicycle;
+package yellowbicycle;
 
 import java.util.concurrent.DelayQueue;
 

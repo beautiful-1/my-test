@@ -1,7 +1,7 @@
-package test1.impl;
+package yellowbicycle.impl;
 
-import test1.IBicycle;
-import test1.IStation;
+import yellowbicycle.IBicycle;
+import yellowbicycle.IStation;
 
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;

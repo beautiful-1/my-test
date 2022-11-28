@@ -1,8 +1,8 @@
-package test1.task;
+package yellowbicycle.task;
 
-import test1.IBicycle;
-import test1.IStation;
-import test1.impl.YellowBicycle;
+import yellowbicycle.IBicycle;
+import yellowbicycle.IStation;
+import yellowbicycle.impl.YellowBicycle;
 
 import java.util.concurrent.DelayQueue;
 
