@@ -4,7 +4,7 @@ package solution;
  * @author LZN
  * @Title LongestPalindrome
  * @ProjectName pattern
- * @Description
+ * @Description 最长回文子串
  * @date 2022-10-15 22:48
  **/
 public class LongestPalindrome {
@@ -54,11 +54,47 @@ public class LongestPalindrome {
                 }
             }
         }
-        return s.substring(begin, begin + maxLen-1);
+        return s.substring(begin, begin + maxLen - 1);
     }
 
+    public String longestPalindrome1(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        int strLen = s.length();
+        int len = 1;
+        int right = 0;
+        int left = 0;
+        int maxStart = 0;
+        int maxLen = 0;
+        for (int i = 0; i < strLen; i++) {
+            left = i - 1;
+            right = i + 1;
+            while (left >= 0 && s.charAt(i) == s.charAt(left)) {
+                left--;
+                len++;
+            }
+            while (right < strLen && s.charAt(i) == s.charAt(right)) {
+                len++;
+                right++;
+            }
+            while (left >= 0 && right < strLen && s.charAt(left) == s.charAt(right)) {
+                left--;
+                right++;
+                left += 2;
+            }
+            if (len > maxLen) {
+                maxLen = len;
+                maxStart = left;
+            }
+            len = 1;
+        }
+        return s.substring(maxStart + 1, maxStart + maxLen + 1);
+    }
+
+
     public static void main(String[] args) {
-        String s="ababababab";
+        String s = "ababababab";
         String s1 = longestPalindrome(s);
     }
 
